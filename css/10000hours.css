@@ -34,14 +34,9 @@
             format("opentype");
 }
 
-.blind {
-    /* 다른 ir 기법 찾아보기 */
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
+* {
+    border: transparent;
+    box-sizing: border-box;
 }
 
 html,
@@ -49,6 +44,15 @@ body,
 #app {
     width: 100%;
     height: 100%;
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
 }
 
 /* body */
@@ -68,8 +72,7 @@ body {
 
 /* tit-timelaw */
 .tit-timelaw {
-    margin: 0 auto;
-    margin-bottom: 60px;
+    margin: 0 auto 60px;
 }
 
 .img-title {
@@ -81,9 +84,9 @@ body {
 
 .img-clock {
     position: relative;
+    display: block;
     margin: 0 auto;
     top: 10px;
-    display: block;
     width: 261px;
     height: 265px;
 }
@@ -115,9 +118,9 @@ body {
 
 /* cont-input */
 .cont-input {
+    position: relative;
     font-size: 24px;
     line-height: 24px;
-    position: relative;
     margin-bottom: 147px;
 }
 
@@ -133,9 +136,7 @@ body {
     width: 228px;
     height: 57px;
     border-radius: 7px;
-    border: transparent;
     margin: 0 12px;
-    box-sizing: border-box;
 
     font-family: "GmarketSansMedium";
     font-size: 24px;
@@ -157,7 +158,6 @@ body {
     padding: 21px 49px;
     gap: 10px;
 
-    border: transparent;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 
     font-family: "GmarketSansBold";
@@ -197,16 +197,15 @@ body {
 }
 
 .btn-go {
-    background-color: #fcee21;
-    max-width: fit-content;
-
-    border: transparent;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 56px;
     padding: 21px 49px;
     margin: 0px 15px;
+
+    max-width: fit-content;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
     gap: 10px;
 
+    background-color: #fcee21;
     color: #5b2386;
     font-family: "GmarketSansBold";
     /* font-family: "GmarketSansMedium";
@@ -221,12 +220,9 @@ body {
     border-radius: 56px;
     padding: 21px 49px;
     gap: 10px;
-
-    border: transparent;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    border: transparent;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 
+    background-color: white;
     color: #5b2386;
     font-family: "GmarketSansBold";
     /* font-family: "GmarketSansMedium";
@@ -272,7 +268,6 @@ body {
 
 /* 화이팅! */
 .cont-modal img:nth-of-type(1) {
-    /* nth-of-type으로 설정하면 특정 타입에서만 선택 가능 */
     margin-bottom: 30px;
 }
 
@@ -284,41 +279,4 @@ body {
 /* 라이캣 */
 .cont-modal img:nth-of-type(3) {
     margin-bottom: 74px;
-}
-
-/* MEDIA QUERY */
-/* Tablet */
-@media (max-width: 768px) {
-    .img-title {
-        width: 430px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 394px) {
-    .tit-timelaw {
-        margin-bottom: 60px;
-    }
-
-    .img-title {
-        position: relative;
-        top: 128px;
-        width: 267px;
-    }
-    .img-clock {
-        position: relative;
-        top: 35px;
-        width: 125px;
-        height: 126px;
-    }
-
-    .img-sub-title {
-        width: 297px;
-    }
-
-    .txt-desc,
-    .tit-desc {
-        font-size: 16px;
-        line-height: 16px;
-    }
 }
